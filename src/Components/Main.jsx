@@ -1,20 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter, Route, Routes, Link  } from 'react-router-dom';
-import Props from './Props';
+import PropsFirstImg from './Props/PropsFirstImg';
+import PropsSecondImg from "./Props/PropsSecondImg";
+import PropsThirdImg from "./Props/PropsThirdImg";
+import PropsFourImg from "./Props/PropsFourImg";
 import * as S from '../Styles/mainStyles';
 import objetivosOnu from './Images/objetivosOnu.png';
 import indicadores from './Images/indicadores.png';
 import objPic from './Images/objPic.png';
-import pic3 from './Images/pic3.png';
-import pic5 from './Images/pic5.png';
-import pic8 from './Images/pic8.png';
-import pic from './Images/pic.png';
+import img3G from './Images/img3G.png';
+import img5G from './Images/img5G.png';
+import img8G from './Images/img8G.png';
+import img14G from './Images/img14G.png';
+
 
 export default function Main(){
 
-    const [openImage, setOpenImage] = useState(false);
-    const [openGithub, setOpenGithub] = useState(false);
-    const [openLinkedin, setOpenLinkedin] = useState(false);
+    const [openImage1, setOpenImage1] = useState(false);
+    const [openImage2, setOpenImage2] = useState(false);
+    const [openImage3, setOpenImage3] = useState(false);
+    const [openImage4, setOpenImage4] = useState(false);
+
+
     return(
         <S.ContainerMain>
             <img src={objPic} alt="" />
@@ -29,16 +35,25 @@ export default function Main(){
             <S.thirdText>Como estão as ações da cidade de São Paulo?</S.thirdText>
             </S.ContainerText>
             <S.fileiras>
-                {/* <Props modal={() => {
-                    setOpenImage(!openImage);
+                <PropsFirstImg modal1={() => {
+                    setOpenImage1(!openImage1);
                 }} />
-                {openImage}
-                <img>
-                </img> */}
-                {/* <S.firstImg src={pic3}  alt="" /> */}
-                {/* <S.secondImg src={pic5}  alt="" />
-                <S.thirdImg src={pic8}  alt="" />
-                <S.fourImg src={pic}  alt="" /> */}
+                {openImage1 && <S.Pic src={img3G} alt="" /> }
+
+                <PropsSecondImg modal2={() => {
+                    setOpenImage2(!openImage2);
+                }} />
+                {openImage2 && <S.Pic src={img5G} alt="" /> }
+
+                <PropsThirdImg modal3={() => {
+                    setOpenImage3(!openImage3);
+                }} />
+                {openImage3 && <S.Pic src={img8G} alt="" /> }
+
+                <PropsFourImg modal4={() => {
+                    setOpenImage4(!openImage4);
+                }} />
+                {openImage4 && <S.Pic src={img14G} alt="" /> }
             </S.fileiras>
         </S.ContainerMain>
     )

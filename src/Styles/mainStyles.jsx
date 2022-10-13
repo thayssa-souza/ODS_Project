@@ -38,21 +38,17 @@ export const MajorPic = styled.img`
     margin-top:7vh;
 `
 
-export const primeiraFileira = styled.div`
-    width:100%;
-    display:flex;
-    justify-content: center;
-    margin-top:7vh;
-    
-`
-
 export const thirdText = styled.h2`
     margin-top:5vh;
 `
 
 export const fileiras = styled.div`
-    width:100%;
     display:flex;
     justify-content: center;
     margin-top:5vh;
+`
+
+export const Pic = styled.img`
+    width:50vw;
+    margin-top:25vh;
 `
