@@ -48,7 +48,28 @@ export const fileiras = styled.div`
     margin-top:5vh;
 `
 
+export const ContainerImages = styled.div`
+    margin-top:-2vh;
+`
+
+export const ContainerPicAndText = styled.div`
+    width:70%;
+    display:flex;
+    margin-left:15vw;
+    background-color: #e9edc9;
+`
+
 export const Pic = styled.img`
-    width:50vw;
-    margin-top:25vh;
+    width:35vw;
+    height:42vh;
+`
+
+export const TextImage = styled.h2`
+    font-size:22px;
+    font-weight: 300;
+    margin-top:9vh;
+    margin-left:2vw;
+    margin-right:2vw;
+    text-align: center;
+    line-height: 27px;
 `

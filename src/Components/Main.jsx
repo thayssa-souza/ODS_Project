@@ -19,6 +19,7 @@ export default function Main(){
     const [openImage2, setOpenImage2] = useState(false);
     const [openImage3, setOpenImage3] = useState(false);
     const [openImage4, setOpenImage4] = useState(false);
+    const [openText] = useState('Foi desenvolvido o Centro de Contingência do Estado de São Paulo para monitorar e coordenar ações contra a propagação do novo coronavírus')
 
 
     return(
@@ -37,24 +38,55 @@ export default function Main(){
             <S.fileiras>
                 <PropsFirstImg modal1={() => {
                     setOpenImage1(!openImage1);
+                    setOpenImage2(false);
+                    setOpenImage3(false);
+                    setOpenImage4(false);
+
                 }} />
-                {openImage1 && <S.Pic src={img3G} alt="" /> }
 
                 <PropsSecondImg modal2={() => {
                     setOpenImage2(!openImage2);
+                    setOpenImage1(false);
+                    setOpenImage3(false);
+                    setOpenImage4(false);
                 }} />
-                {openImage2 && <S.Pic src={img5G} alt="" /> }
 
                 <PropsThirdImg modal3={() => {
                     setOpenImage3(!openImage3);
+                    setOpenImage1(false);
+                    setOpenImage2(false);
+                    setOpenImage4(false);
                 }} />
-                {openImage3 && <S.Pic src={img8G} alt="" /> }
 
                 <PropsFourImg modal4={() => {
                     setOpenImage4(!openImage4);
+                    setOpenImage1(false);
+                    setOpenImage2(false);
+                    setOpenImage3(false);
                 }} />
-                {openImage4 && <S.Pic src={img14G} alt="" /> }
             </S.fileiras>
+
+            <S.ContainerImages>
+                {openImage1 && <S.ContainerPicAndText>
+                    <S.Pic src={img3G} alt="" />
+                    <S.TextImage>Foi desenvolvido o Centro de Contingência do Estado para monitorar e coordenar ações contra a propagação do novo coronavírus. São Paulo foi o primeiro estado a ter 70% da população completamente vacina</S.TextImage>
+                </S.ContainerPicAndText>}
+
+                {openImage2 && <S.ContainerPicAndText>
+                    <S.Pic src={img5G} alt="" />
+                    <S.TextImage>Nas eleições de 2022 em São Paulo, foram eleitos 5 vereadores transgêneros e/ou transexuais, destes, 4 compõem a Bancada Feminista do Senado</S.TextImage> 
+                </S.ContainerPicAndText>}
+
+                {openImage3 && <S.ContainerPicAndText>
+                    <S.Pic src={img8G} alt="" />
+                    <S.TextImage>Mesmo com a crise eonômica brasileira, São Paulo continua em ascenção. Comparando maio de 2022 com maio de 2021, houve um aumento de 2,2% no PIB Paulista com foco nos setores da agropecuária, indústria e serviços</S.TextImage>
+                </S.ContainerPicAndText>}
+
+                {openImage4 && <S.ContainerPicAndText>
+                    <S.Pic src={img14G} alt="" />
+                    <S.TextImage>Com a instauração do projeto de despoluição dos rios que atravessam São Paulo, a mancha de poluição do Rio Tietê diminuir 40% entre 2020 e 2021, correspondendo a uma diminuição de 380km em um ano</S.TextImage>
+                </S.ContainerPicAndText>}
+            </S.ContainerImages>
         </S.ContainerMain>
     )
 }
