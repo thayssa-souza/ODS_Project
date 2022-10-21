@@ -24,7 +24,7 @@ export default function Main(){
 
     return(
         <S.ContainerMain>
-            <img src={objPic} alt="" />
+            <S.SloganPic src={objPic} alt="" />
             <S.ContainerText>
             <S.firstText>Em 2015, com o objetivo de superar os maiores desafios que aflingem a humanidade, foram instituídas pela Organização das Nações Unidas (ONU) os 17 Objetivos de Desenvolvimento Sustentável.</S.firstText>
             <S.secondText>Com o propósito de paralisar o crescimento ecônomico da pobreza, a desigualdade e mudanças climáticas, 193 Estado-membros da ONU aderiram ao movimento.</S.secondText>

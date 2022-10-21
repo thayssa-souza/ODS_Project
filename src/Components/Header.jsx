@@ -6,8 +6,8 @@ import sp from './Images/sp.png'
 export default function Header(){
     return(
         <S.ContainerHeader>
-            <img src={nacoesUnidasPic} alt="" />
-            <img src={sp} alt="" />
+            <S.HeaderImg src={nacoesUnidasPic} alt="" />
+            <S.HeaderImg src={sp} alt="" />
         </S.ContainerHeader>
     )
 }
